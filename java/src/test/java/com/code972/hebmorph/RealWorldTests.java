@@ -17,16 +17,17 @@
  **************************************************************************/
 package com.code972.hebmorph;
 
-import com.code972.hebmorph.datastructures.DictRadix;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.code972.hebmorph.datastructures.DictRadix;
 
 public class RealWorldTests extends TestBase {
 
@@ -34,10 +35,10 @@ public class RealWorldTests extends TestBase {
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
-        specialTokenizationCases.addNode("H&M", new Byte((byte) 0));
-        specialTokenizationCases.addNode("C++", new Byte((byte) 0));
-        specialTokenizationCases.addNode("i-phone", new Byte((byte) 0));
-        specialTokenizationCases.addNode("i-pad", new Byte((byte) 0));
+        specialTokenizationCases.addNode("H&M", (byte) 0);
+        specialTokenizationCases.addNode("C++", (byte) 0);
+        specialTokenizationCases.addNode("i-phone", (byte) 0);
+        specialTokenizationCases.addNode("i-pad", (byte) 0);
     }
 
     @Test

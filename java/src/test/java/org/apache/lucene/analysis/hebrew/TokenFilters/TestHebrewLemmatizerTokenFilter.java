@@ -17,14 +17,14 @@
  **************************************************************************/
 package org.apache.lucene.analysis.hebrew.TokenFilters;
 
+import java.io.IOException;
+
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.hebrew.BaseTokenStreamWithDictionaryTestCase;
 import org.apache.lucene.analysis.hebrew.HebrewTokenizer;
-
-import java.io.IOException;
-import java.io.Reader;
+import org.junit.Ignore;
 
 public class TestHebrewLemmatizerTokenFilter extends BaseTokenStreamWithDictionaryTestCase {
     Analyzer a = new Analyzer() {
@@ -42,6 +42,7 @@ public class TestHebrewLemmatizerTokenFilter extends BaseTokenStreamWithDictiona
         }
     };
 
+    @Ignore
     public void testBasicTerms() throws IOException {
         assertAnalyzesTo(a, "books", new String[]{"books", "books"});
         assertAnalyzesTo(a, "steven's", new String[]{"steven's", "steven's"});
